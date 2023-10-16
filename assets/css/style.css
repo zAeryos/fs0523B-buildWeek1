@@ -5,3 +5,44 @@ root {
     --color-red: #D20094;
     --color-purple: #900080;
 }
+
+#background-container {
+    background-image: url(../images/bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-white {
+    color: white;
+}
+
+.no-bg {
+    background: transparent;
+    border: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 2.3;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 2;
+}
+
+#logo-container {
+    padding-left: 10vh;
+    padding-top:5vh;
+    padding-bottom:5vh;
+}
