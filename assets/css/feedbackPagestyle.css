@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap');
 
-root {
+:root {
     --color-blue: #00FFFF;
     --color-red: #D20094;
     --color-purple: #900080;
