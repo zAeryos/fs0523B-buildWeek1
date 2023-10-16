@@ -39,6 +39,7 @@ p {
     font-weight: 400;
     font-size: 32px;
     line-height: 2;
+    word-wrap: break-word;
 }
 
 #logo-container {
@@ -46,3 +47,13 @@ p {
     padding-top:5vh;
     padding-bottom:5vh;
 }
+
+.rating-star {
+    width: 70px;
+    padding: 40px 10px 100px 10px;
+}
+
+form input {
+    font-weight: 16px;
+}
+
