@@ -5,3 +5,56 @@ root {
     --color-red: #D20094;
     --color-purple: #900080;
 }
+
+
+
+    #contenin2{     box-sizing: content-box;
+                    background-image:url(/fs0523B-buildWeek1/assets/images/bg.jpg);
+                        height: 100vh;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size:cover;
+                   
+                     color: white;
+                     
+                     
+
+            }
+            
+                
+            
+            
+            .titolo{
+                 font-family: 'Outfit', sans-serif;
+                 font-weight: 700;
+                 font-weight: normal;
+                 text-align: center;
+                 font-size: xx-large;
+            }
+            #bold{
+                text-align: center;
+                font-family: 'Outfit', sans-serif;
+                font-weight: 700;
+                font-size: xx-large;
+            }
+            #timer{
+                  text-align: right;
+            }
+            #formClick{
+                text-align: center;
+                padding: 30px;
+                font-family: 'Outfit', sans-serif;
+                font-weight: 400;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .bot1,.bot2,.bot3,.bot4{
+
+                display: inline-block;
+                border:solid white;
+                padding: 10px 200px ;
+                border-radius: 40px;
+                background-color: white transparent;
+                margin: 10px;
+            }
+ 
