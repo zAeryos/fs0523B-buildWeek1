@@ -14,7 +14,7 @@ root {
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size:cover;
-                   
+                       
                      color: white;
                      
                      
@@ -29,16 +29,20 @@ root {
                  font-weight: 700;
                  font-weight: normal;
                  text-align: center;
-                 font-size: xx-large;
+                 font-size: 4em;
+                 margin-top: 160px;
             }
             #bold{
                 text-align: center;
                 font-family: 'Outfit', sans-serif;
                 font-weight: 700;
-                font-size: xx-large;
+                font-size: 4em;
             }
             #timer{
-                  text-align: right;
+                 position: absolute;
+                 top :80px;
+                 right: 45px;
+                  padding-right: 15px;
             }
             #formClick{
                 text-align: center;
@@ -47,14 +51,29 @@ root {
                 font-weight: 400;
                 display: flex;
                 flex-wrap: wrap;
+                
             }
             .bot1,.bot2,.bot3,.bot4{
 
                 display: inline-block;
-                border:solid white;
-                padding: 10px 200px ;
+                border: 3px  solid white ;
+                padding: 30px 65px ;
                 border-radius: 40px;
                 background-color: white transparent;
                 margin: 10px;
+                flex: 0 1 calc(100%/4);
+                position: relative;
+                right: 15%;
+                left:12%;
+                top:12px
+
+            }
+            .num_domande{
+                text-align: center;
+                font-size: 2rem;
+                
+            }
+            .red{
+                color: red;
             }
  
