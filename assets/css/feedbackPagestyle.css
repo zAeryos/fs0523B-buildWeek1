@@ -48,11 +48,6 @@ p {
     padding-bottom:5vh;
 }
 
-.rating-star {
-    width: 70px;
-    padding: 40px 10px 100px 10px;
-}
-
 #feedback-form input {
     font-size: 16px;
     width: 43%;
@@ -73,10 +68,10 @@ p {
     font-size: 35px;
     cursor: pointer;
     transition: color 0.2s ease;
+    width: 70px;
+    padding: 40px 10px 100px 10px;
   }
-  .rating-star.active {
-    color: #ff9c1a;
-  }
+  
 
   .button {
     color: #0B0F3A;
