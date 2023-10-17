@@ -34,7 +34,7 @@ function risposta(opzione) {
         result.style.display = "block";
         result.textContent = "Quiz completato. Punteggio finale: " + score + " su " + questions.length;
     }
-    resetTimer(); 
+    resetTimer(); // Resettiamo il timer quando l'utente risponde
 }
 
 function visualizzaDomandaCorrente() {
@@ -54,7 +54,7 @@ function visualizzaDomandaCorrente() {
         button.onclick = () => risposta(option);
         optionsElement.appendChild(button);
     });
-    startTimer(); 
+    startTimer(); // Avviamo il timer quando visualizziamo la nuova domanda
 }
 
 function shuffleArray(array) {
@@ -78,33 +78,6 @@ function resetTimer() {
 }
 
 fetchQuestions();
-function risposta(opzione) {
-  const optionsElement = document.getElementById("options");
-  const currentQuestion = questions[currentQuestionIndex];
-
-  if (opzione === currentQuestion.correct_answer) {
-      score++;
-  }
-
-  currentQuestionIndex++;
-
-  if (currentQuestionIndex < questions.length) {
-      visualizzaDomandaCorrente();
-  } else {
-      const quizContainer = document.querySelector(".quiz-container");
-      const result = document.getElementById("result");
-
-      optionsElement.style.display = "none"; 
-      result.style.display = "block"; 
-      result.textContent = "Quiz completato. Punteggio finale: " + score + " su " + questions.length;
-
-      resetTimer();
-
-      
-      quizContainer.style.display = "none";
-  }
-}
-
 
 
 
