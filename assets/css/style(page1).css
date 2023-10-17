@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap');
 
-root {
+:root {
     --color-blue: #00FFFF;
     --color-red: #D20094;
     --color-purple: #900080;
 }
 
 body {
-    background-image: url("/assets/images/bg.jpg");
+    background-image: url("../images/bg.jpg");
     height:100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -102,9 +102,9 @@ input[type="checkbox"] {
     border: 0.15em solid white;
     transform: translateY(-0.100em);
     -webkit-appearance: none;
-  }
+}
   
-  input[type=checkbox]:checked {
+input[type=checkbox]:checked {
     background-color:#00FFFF;
-  }
+}
  
