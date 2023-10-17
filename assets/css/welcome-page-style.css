@@ -99,19 +99,19 @@ aside p {
     font-family: 'Outfit', sans-serif;
     font-weight: bold;
     filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
-    padding: 20px 80px;
+    padding: 10px 75px;
     font-size: 2em;
     cursor: pointer;
 }
 
 input[type="proceed"]:checked {
     margin-left: 300px;
+    margin-right: 100px;
     border: 1px solid white;
     background-color: transparent;
     color: #0B0F3A;
     font-family: 'Outfit', sans-serif;
     font-weight: bold;
-    filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
     padding: 20px 80px;
     font-size: 2em;
     cursor: pointer;
