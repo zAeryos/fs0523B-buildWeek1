@@ -80,21 +80,47 @@ p, ul, li {
 aside {
     display:flex;
     flex-direction:row;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 aside p {
+    margin-top: 40px;
     margin-left: 10px;
+    font-weight: bold;
 }
 
 
-.bottone {
-    margin-left: 500px;
+.proceed {
+    margin-left: 300px;
+    margin-right: 100px;
+    border: 6px solid #00FFFF;
+    background-color: #0994A8;
+    color: #0B0F3A;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
+    padding: 20px 80px;
+    font-size: 2em;
+    cursor: pointer;
 }
+
+input[type="proceed"]:checked {
+    margin-left: 300px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: #0B0F3A;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
+    padding: 20px 80px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
 
 input[type="checkbox"] {
-
     margin: 0;
+    margin-top: 40px;
     margin-left: 7px;
     font: inherit;
     width: 1.15em;
