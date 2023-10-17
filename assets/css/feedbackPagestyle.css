@@ -53,8 +53,19 @@ p {
     padding: 40px 10px 100px 10px;
 }
 
-form input {
-    font-weight: 16px;
+#feedback-form input {
+    font-size: 16px;
+    width: 43%;
+    margin-top:50px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-red);
+    color:white
+}
+
+#feedback-form input:focus {
+    outline-width: 0;
 }
 
 .rating-star {
@@ -65,4 +76,16 @@ form input {
   }
   .rating-star.active {
     color: #ff9c1a;
+  }
+
+  .button {
+    color: #0B0F3A;
+    background-color: #0994A8;
+    border: 6px solid #00FFFF ;
+    padding: 15px 30px;
+    margin-top: 70px;
+    font-size: 40px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
   }
