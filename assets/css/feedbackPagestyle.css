@@ -57,3 +57,12 @@ form input {
     font-weight: 16px;
 }
 
+.rating-star {
+    color: #e6e6e6;
+    font-size: 35px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  .rating-star.active {
+    color: #ff9c1a;
+  }
