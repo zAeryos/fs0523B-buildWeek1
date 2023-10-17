@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap');
+
+root {
+    --color-blue: #00FFFF;
+    --color-red: #D20094;
+    --color-purple: #900080;
+}
+  /*bottone pasquale*/
+  .button {
+    color: #0B0F3A;
+    background-color: #0994A8;
+    border: 6px solid #00FFFF ;
+    padding: 20px 80px;
+    font-size: 40px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
+    
+   
+  }
+  
+  
+/* fine pasquale*/
