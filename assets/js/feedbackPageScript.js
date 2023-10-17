@@ -1,15 +1,41 @@
+//valore di valutazione a 0/
+let rating = 0;
 
- // Select all elements with the "i" tag and store them in a NodeList called "stars"
- const stars = document.querySelectorAll(".rating-star");
- // Loop through the "stars" NodeList
- stars.forEach((star, index1) => {
-   // Add an event listener that runs a function when the "click" event is triggered
-   star.addEventListener("click", () => {
-     // Loop through the "stars" NodeList Again
-     stars.forEach((star, index2) => {
-       // Add the "active" class to the clicked star and any stars with a lower index
-       // and remove the "active" class from any stars with a higher index
-       index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
-     });
-   });
- });
+// gestore di eventi alle stelle /
+stars.forEach((star) => {
+  star.addEventListener("mouseover", hoverStar);
+  star.addEventListener("mouseout", resetStars);
+  star.addEventListener("click", clickStar);
+});
+
+// Funzione per gestire il passaggio del mouse su una stella /
+function hoverStar(event) {
+  const hoveredStar = event.target;
+  const hoveredRating = parseInt(hoveredStar.getAttribute("data-rating"));
+  highlightStars(hoveredRating);
+}
+
+// ripristina il colore delle stelle al passaggio del mouse /
+function resetStars() {
+  highlightStars(rating);
+}
+
+// evidenzia le stelle fino a una stella specifica /
+function highlightStars(numStars) {
+  stars.forEach((star, index) => {
+    if (index < numStars) {
+      star.classList.add("active");
+    } else {
+      star.classList.remove("active");
+    }
+  });
+}
+
+// gestisce il clic su una stella/
+function clickStar(event) {
+  rating = parseInt(event.target.getAttribute("data-rating"));
+  ratingValue.textContent = `Valutazione: ${rating}`;
+}
+
+// stelle vuote all'avvio/
+resetStars();
