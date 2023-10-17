@@ -1,0 +1,17 @@
+/*bottonedomandePasquale*/
+
+
+.prossima{
+margin-left: 1100px;
+margin-top: 850px;
+}
+#bottone{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgba(214, 211, 211, 0.938);
+
+}
