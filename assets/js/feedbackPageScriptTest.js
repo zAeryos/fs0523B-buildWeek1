@@ -22,7 +22,7 @@ stars.forEach((star, index) => {
 
     star.addEventListener('click', () => {
         userRating = index + 1;
-        highlightStarsClicked(index);
+        highlightStars(index);
     });
 });
 

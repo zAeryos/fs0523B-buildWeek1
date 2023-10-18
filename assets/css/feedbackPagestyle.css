@@ -68,11 +68,6 @@
         -webkit-tap-highlight-color: transparent;
     }
 
-    .rating-star.highlighted-clicked {
-        fill: #00FFFF;
-        -webkit-tap-highlight-color: transparent;
-    }
-
     .description-text {
         padding-top:50px;
         padding-bottom:50px;
@@ -84,8 +79,14 @@
         border: 6px solid #00FFFF ;
         padding: 15px 30px;
         margin-top: 70px;
+        margin-bottom: 50px;
         font-size: 40px;
         font-family: 'Outfit', sans-serif;
         font-weight: bold;
         filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
+    }
+
+    .external-link {
+        color:#0B1740;
+        text-decoration: none;
     }
