@@ -1,77 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap');
 
-:root {
-    --color-blue: #00FFFF;
-    --color-red: #D20094;
-    --color-purple: #900080;
-}
+    :root {
+        --color-blue: #00FFFF;
+        --color-red: #D20094;
+        --color-purple: #900080;
+    }
 
-body {
-    background-image: url(../images/bg.jpg);
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    body {
+        background-image: url(../images/bg.jpg);
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-.text-white {
-    color: white;
-}
+    .text-white {
+        color: white;
+    }
 
-.no-bg {
-    background: transparent;
-    border: none;
-}
+    .no-bg {
+        background: transparent;
+        border: none;
+    }
 
-.centered {
-    text-align: center;
-}
+    .centered {
+        text-align: center;
+    }
 
-h4, h5, h6 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 2.3;
-}
+    h4, h5, h6 {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 2.3;
+    }
 
-p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 2;
-    word-wrap: break-word;
-}
+    p {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 2;
+        word-wrap: break-word;
+    }
 
-#logo-container {
-    padding-left: 10vh;
-    padding-top:5vh;
-    padding-bottom:5vh;
-}
+    #logo-container {
+        padding-left: 10vh;
+        padding-top:5vh;
+        padding-bottom:5vh;
+    }
 
-#feedback-form input {
-    font-size: 16px;
-    width: 43%;
-    margin-top:50px;
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--color-red);
-    color:white
-}
+    #feedback-form input {
+        font-size: 16px;
+        width: 43%;
+        margin-top:50px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--color-red);
+        color:white
+    }
 
-#feedback-form input:focus {
-    outline-width: 0;
-}
+    #feedback-form input:focus {
+        outline-width: 0;
+    }
 
-.rating-star {
-    color: #e6e6e6;
-    font-size: 35px;
-    cursor: pointer;
-    transition: color 0.2s ease;
-    width: 70px;
-    padding: 40px 10px 100px 10px;
-  }
+    .rating-star {
+        color: #e6e6e6;
+        font-size: 35px;
+        cursor: pointer;
+        transition: color 0.2s ease;
+        width: 70px;
+        padding: 40px 10px 100px 10px;
+    }
   
+    .active {
+        fill: #00FFFF
+    }
 
   .button {
     color: #0B0F3A;

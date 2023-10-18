@@ -20,18 +20,18 @@ function resetStars() {
   highlightStars(rating);
 }
 
-// evidenziato le stelle fino a una stella specifica /
+// evidenzia le stelle fino a una stella specifica /
 function highlightStars(numStars) {
   stars.forEach((star, index) => {
     if (index < numStars) {
       star.classList.add("active");
     } else {
-      star.classList.remove("active"); 
+      star.classList.remove("active");
     }
   });
 }
 
-// gestisce il clic su una stella/
+// gestisce il click su una stella/
 function clickStar(event) {
   rating = parseInt(event.target.getAttribute("data-rating"));
   ratingValue.textContent = `Valutazione: ${rating}`;
