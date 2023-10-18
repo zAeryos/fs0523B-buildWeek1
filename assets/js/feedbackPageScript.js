@@ -20,13 +20,13 @@ function resetStars() {
   highlightStars(rating);
 }
 
-// evidenzia le stelle fino a una stella specifica /
+// evidenziato le stelle fino a una stella specifica /
 function highlightStars(numStars) {
   stars.forEach((star, index) => {
     if (index < numStars) {
       star.classList.add("active");
     } else {
-      star.classList.remove("active");
+      star.classList.remove("active"); 
     }
   });
 }
