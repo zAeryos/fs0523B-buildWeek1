@@ -79,83 +79,6 @@ body {
       border-image: linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 8px)
                   calc(100% - 8px) no-repeat,
             linear-gradient(346deg, transparent 0%, #ffffff 100%);
-<<<<<<< HEAD
-            }
-            .white{color:white;
-            opacity: 1;}
-            .num_domande{
-                text-align: center;
-                font-size: 20px;
-                font-weight: bold;
-                font-family: 'Inter', sans-serif;
-                margin-left: 200px;
-                margin-bottom: 100px;
-                
-            }
-            .red{
-                color:#900080;
-                
-            }
-             .footer{
-                        display: flex;
-                        flex-direction: row;
-                        margin-top: 100px;
-                        margin-left: 100px;
-             }
-             .num_domande{
-                margin-left: 200px;
-             }
-             .prossima{ position: relative;
-                        left: 50%;
-                        }
-                
-                
-                #bottone{
-                  padding-top: 10px;
-                  padding-bottom: 10px;
-                  padding-left: 30px;
-                  padding-right: 30px;
-                  background-color: transparent;
-                  color: rgb(255, 255, 255);
-                  border: 2px solid rgba(214, 211, 211, 0.938);
-                  height: 70px;
-                  width: 280px;
-                  font-weight: bold;
-                  font-size: 1.4rem;
-                  cursor: pointer;
-                
-                }
-
-                @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
-
-.container {
-  margin: auto;
-  width: 400px;
-}
-
-.path--background {
-  fill: rgb(34, 213, 201);
-  stroke: #fff;
-  stroke-width: 0px;
-}
-
-.pulse {
-  fill: rgb(255, 74, 74) !important;
-}
-
-.path--foreground {
-  fill: #eee;
-  stroke: #eee;
-  stroke-width: 2px;
-}
-
-.label {
-  font: 90px "Open Sans";
-  font-weight: 900;
-  text-anchor: middle;
-  fill: rgb(34, 213, 201);
-}
-=======
 }
 .white {
       color: white;
@@ -200,4 +123,3 @@ body {
       font-size: 1.4rem;
       cursor: pointer;
 }
->>>>>>> 08f73768282c372f4e2cfc8b2471ca0fde94e990
