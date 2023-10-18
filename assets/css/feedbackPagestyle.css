@@ -62,28 +62,30 @@
     #feedback-form input:focus {
         outline-width: 0;
     }
-
-    .rating-star {
-        color: #e6e6e6;
-        font-size: 35px;
-        cursor: pointer;
-        transition: color 0.2s ease;
-        width: 70px;
-        padding: 40px 10px 100px 10px;
-    }
   
-    .active {
-        fill: #00FFFF
+    .rating-star.highlighted {
+        fill: #00FFFF;
+        -webkit-tap-highlight-color: transparent;
     }
 
-  .button {
-    color: #0B0F3A;
-    background-color: #0994A8;
-    border: 6px solid #00FFFF ;
-    padding: 15px 30px;
-    margin-top: 70px;
-    font-size: 40px;
-    font-family: 'Outfit', sans-serif;
-    font-weight: bold;
-    filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
-  }
+    .rating-star.highlighted-clicked {
+        fill: #00FFFF;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .description-text {
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+
+    .button {
+        color: #0B0F3A;
+        background-color: #0994A8;
+        border: 6px solid #00FFFF ;
+        padding: 15px 30px;
+        margin-top: 70px;
+        font-size: 40px;
+        font-family: 'Outfit', sans-serif;
+        font-weight: bold;
+        filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
+    }
