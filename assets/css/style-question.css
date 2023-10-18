@@ -5,16 +5,16 @@
     --color-red: #D20094;
     --color-purple: #900080;
 }
-    
+    body{ background-image:url(../images/bg.jpg);
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;}
 
     #contenin2{    
                    
                     box-sizing: content-box;
-                    background-image:url(../images/bg.jpg);
-                        height: 100vh;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size:cover;
+                    
                        
                      color: white;
                      
@@ -128,5 +128,6 @@
                   width: 280px;
                   font-weight: bold;
                   font-size: 1.4rem;
+                  cursor: pointer;
                 
                 }
