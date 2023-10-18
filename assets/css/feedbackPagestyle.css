@@ -6,7 +6,7 @@
     --color-purple: #900080;
 }
 
-#background-container {
+body {
     background-image: url(../images/bg.jpg);
     height: 100vh;
     background-position: center;
