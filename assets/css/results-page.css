@@ -128,6 +128,37 @@ body {
   text-align: end;
 }
 
+/* PROVA CERCHIOOOOOOOOOOOOOOOOOOOOOOO */
+
+.container_test {
+  display: flex;
+  width: 420px;
+  padding: 50px 0;
+  border-radius: 8px;
+  background: #fff;
+  row-gap: 30%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circular-progress {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-color: rgba(128, 0, 128, 0);
+  background: conic-gradient(#d20094 3.6deg, #00ffff 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-value {
+  position: relative;
+}
+
+/* FINE PROVA CERCHIOOOOOOOOOOOOOOOOOOOOOOOOO*/
+
 #footer {
   margin-top: 100px;
   display: flex;
