@@ -26,7 +26,7 @@ function risposta(opzione) {
         visualizzaDomandaCorrente();
     } else {
         const questionElement = document.getElementById("question");
-        const optionsElement = document.getElementById("option");
+        const optionsElement = document.getElementById("options");
 
         questionElement.style.display = "none";
         optionsElement.style.display = "none";
@@ -34,15 +34,12 @@ function risposta(opzione) {
         result.style.display = "block";
         result.textContent = "Quiz completato. Punteggio finale: " + score + " su " + questions.length;
     }
-    resetTimer(); // Resettiamo il timer quando l'utente risponde
+    resetTimer();
 }
 
 function visualizzaDomandaCorrente() {
-    const questionElement = document.getElementById("question");
     const optionsElement = document.getElementById("options");
     const currentQuestion = questions[currentQuestionIndex];
-
-    questionElement.textContent = "Domanda " + (currentQuestionIndex + 1) + ": " + currentQuestion.question;
 
     optionsElement.innerHTML = "";
     const allOptions = [currentQuestion.correct_answer, ...currentQuestion.incorrect_answers];
@@ -54,7 +51,7 @@ function visualizzaDomandaCorrente() {
         button.onclick = () => risposta(option);
         optionsElement.appendChild(button);
     });
-    startTimer(); // Avviamo il timer quando visualizziamo la nuova domanda
+    startTimer();
 }
 
 function shuffleArray(array) {
@@ -70,7 +67,7 @@ function startTimer() {
         if (currentQuestionIndex < questions.length) {
             visualizzaDomandaCorrente();
         }
-    }, 60000); // 60 secondi
+    }, 60000);
 }
 
 function resetTimer() {
@@ -78,16 +75,3 @@ function resetTimer() {
 }
 
 fetchQuestions();
-
-
-
-
-
-
-
-
-
-
-
-
-
