@@ -91,6 +91,18 @@ body {
   flex-grow: 1;
 }
 
+.programming-stats {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  position: absolute;
+  width: 280px;
+}
+
 .span_color2 {
   color: red;
 }
@@ -106,6 +118,7 @@ body {
 .result2 {
   padding-top: 8px;
   font-size: 22px;
+  padding-bottom: 23px;
 }
 
 .middle_p {
@@ -186,10 +199,11 @@ body {
 /*FINE PROVA DONUT CON JS */
 
 #footer {
-  margin-top: 100px;
+  margin-top: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
 .button {
