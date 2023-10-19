@@ -64,29 +64,18 @@ let currentQuestionIndex = 0;
     }
 
     function startTimer() {
-        let progressElm = document.getElementsByClassName('progress')[0];
-        let circumference = 2 * Math.PI * progressElm.getAttribute('r');
+        const timerElement = document.querySelector('.time span');
+        timerElement.textContent = '60';
 
-        progressElm.style.strokeDasharray = circumference;
-        progressElm.style.strokeDashoffset = circumference * 0;
-
-        let max = parseInt(document.getElementsByClassName('seconds')[0].textContent);
-        let seconds = max;
-
-        let secondsElm = document.getElementsByClassName('seconds')[0];
-
-        let timerId = setInterval(() => {
-        seconds--;
-        if(seconds <= 0)
-        clearInterval(timerId);
-        risposta('');
-
-    percentage = seconds/max * 100;
-    progressElm.style.strokeDashoffset = -(circumference - (percentage/100) * circumference);
-
-    secondsElm.textContent = seconds.toString().padStart(2, '0');
-}, 1000);
-
+        timer = setInterval(() => {
+            const remainingTime = parseInt(timerElement.textContent);
+            if (remainingTime > 0) {
+                timerElement.textContent = (remainingTime - 1).toString();
+            } else {
+                clearInterval(timer);
+                risposta('');
+            }
+        }, 1000);
     }
 
     function resetTimer() {
@@ -96,12 +85,7 @@ let currentQuestionIndex = 0;
     fetchQuestions();
 
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
+
 
 
    

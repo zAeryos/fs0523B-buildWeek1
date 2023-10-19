@@ -96,6 +96,7 @@ body {
     color:white;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
+    display: inline-block;
 }
 
 /*bottone trasparente*/

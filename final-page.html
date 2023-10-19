@@ -13,32 +13,41 @@
 
 <body>
     <div class="container">
-      <img src="assets/images/epicode_logo.png" class="epicodelogo" alt="Epicode">
+        <img src="assets/images/epicode_logo.png" class="epicodelogo" alt="Epicode">
+
         <main>
             <div class="titoli">
                 <h4>Welcome to</h4>
                 <h5>your exam</h5>
             </div>
-                <h6 class="h6">Instructions</h6>
-                    <div class="paragrafi">
-                        <p>We don't expect most engineers to know the answers to all of these</p>
-                        <p>questions, so don't worry if you're unsure of a few of them.</p>
-                    </div>
-                        <div class="lista">
-                            <ul>
-                                <li>Each question is <span>timed</span> and can only be <span>answered once</span>.</li>
-                                <li>Changing browser tab or opening other windows will <span>invalidate the question</span>.</li>
-                                <li>This exam will take approx. <span>0-5 minutes</span>.</li>
-                            </ul>
-                        </div>
+            <h6 class="h6">Instructions</h6>
+            <div class="paragrafi">
+                <p>We don't expect most engineers to know the answers to all of these</p>
+                <p>questions, so don't worry if you're unsure of a few of them.</p>
+            </div>
+            <div class="lista">
+                <ul>
+                    <li>Each question is <span>timed</span> and can only be <span>answered once</span>.</li>
+                    <li>Changing browser tab or opening other windows will <span>invalidate the question</span>.</li>
+                    <li>This exam will take approx. <span>0-5 minutes</span>.</li>
+                </ul>
+            </div>
         </main>
-            <aside class="aside">
-           <div class="checkbox2"><input class="checkbox" type="checkbox" name="promise" value="promise"><p>I promise to answer myself without help from anyone</p></div>
-            <div class="buttontrasp2"><input class="buttontrasp" type="button" value="PROCEED"/></div>
+
+        <aside class="aside">
+            <div class="checkbox2">
+                    <input class="checkbox" type="checkbox" name="promise" value="promise"><p>I promise to answer myself without help from anyone</p>
+            </div>
+
+            <div class="buttontrasp2">
+                <input class="buttontrasp" type="button" value="PROCEED"/>
+            </div>
+
             <input id="proceed2" type="button" value="PROCEED"/>
-            </aside>
+        </aside>
     </div>
-    <script src="assets/js/finalPageScript.js"></script>
+
+    
 
     <div class="contenin2">
         <div class="imagine">
@@ -49,21 +58,22 @@
                     height="40px"
               />
         </div>
+
         <div id="question">
               <p class="titolo">
                     How can I create a checkbox in HTML?
               </p>
         </div>
+        
         <svg class="timer">
             <circle class="progress-frame" cx="100" cy="100" r="60" ></circle>
-           
-           
-           
             <circle class="progress" cx="100" cy="100" r="60"></circle>
         </svg>
+
         <div class="time">
-            <p>SECONDI<span class="seconds">60</span>RIMANENTI</p>
+            <p>SECONDS<span class="seconds">60</span>REMAINING</p>
         </div>
+
         <form id="formClick">
               <button type="button" class="bot1">
                     <p class="white">ciao</p>
@@ -72,16 +82,17 @@
               <button type="button" class="bot3">ciao</button>
               <button type="button" class="bot4">ciao</button>
         </form>
+
         <div class="footer">
-              <p class="num_domande">
-                    QUESTION 1<span class="red">/10</span>
-              </p>
-              <div class="prossima">
-                    <button id="bottone" disabled>NEXT →</button>
-              </div>
+            <p class="num_domande">
+                QUESTION 1<span class="red">/10</span>
+            </p>
+            <div class="prossima">
+                <button id="bottone" disabled>NEXT →</button>
+            </div>
         </div>
-  </div>
-  <script src="assets/js/script2.js"></script>
-  <script src="assets/js/timerdomande.js"></script>
+    </div>
+
+    <script src="assets/js/finalPageScript.js"></script>
 </body>
 </html>
