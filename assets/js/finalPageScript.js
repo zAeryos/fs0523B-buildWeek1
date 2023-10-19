@@ -1,3 +1,4 @@
+//Ingresso Welcome Page
 document.addEventListener("DOMContentLoaded", (event) => {
 
 let input = document.querySelector(".checkbox");
@@ -17,7 +18,7 @@ if (input.checked == false){
     buttonGhost.style.display = "none";
 }
 }
-
+//Ingresso Question Page 
 let containWelcome = document.querySelector(".container");
 let containQuestion = document.querySelector(".contenin2");
 
@@ -27,6 +28,4 @@ function changePage() {
   containWelcome.style.display = "none";
   containQuestion.style.display = "block";
   }
-
-});
-
+})

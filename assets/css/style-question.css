@@ -40,11 +40,52 @@ body {
       font-size: 60px;
       margin-bottom: 50px;
 }
-#timer {
+
+.timer {
       position: absolute;
       top: 150px;
-      right: 185px;
-}
+      right: 57px;
+      width: 200px;
+      height: 200px;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+    
+    .progress-frame {
+      fill: transparent;
+      stroke: white;
+      stroke-width: 20px;
+    }
+    
+    .progress {
+      fill: transparent;
+      stroke: #9B1E8D;
+      stroke-width: 21px;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 1s;
+    }
+    
+    .time {
+     position: absolute;
+     top: 150px;
+     right: 191px;
+     transform: translate(-50%, -50%);
+     font-size: 40px;
+     color: rgb(238, 238, 238);
+     text-align: center;
+     font-weight: bold;
+    }
+    .time p{
+      font-size: 12px;
+      font-family: "Outfit", sans-serif;
+      font-weight: 700;
+    }
+    .seconds{
+    font-size: 50px;
+    display: block;
+    font-weight: 700;
+    font-family: "Outfit", sans-serif;
+    }
+
 #formClick {
       align-items: center;
       justify-content: center;
