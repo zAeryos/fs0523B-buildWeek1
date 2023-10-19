@@ -125,12 +125,4 @@ input[type="checkbox"] {
     font: inherit;
     width: 1.15em;
     height: 1.15em;
-    border: 0.15em solid white;
-    transform: translateY(-0.100em);
-    -webkit-appearance: none;
-}
-  
-input[type=checkbox]:checked {
-    background-color:#00FFFF;
-}
- 
+    border: 0.15em;
