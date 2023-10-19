@@ -38,8 +38,10 @@ const myChart = document.getElementById("my-chart");
 
 new Chart(myChart, {
   type: "doughnut",
+
   data: {
     labels: charData.labels,
+
     datasets: [
       {
         label: "Risultati",
@@ -48,8 +50,10 @@ new Chart(myChart, {
     ],
   },
   options: {
+    cutout: 110,
     borderWidth: 0,
     borderRadius: 0,
+
     plugins: {
       legend: {
         display: false,
