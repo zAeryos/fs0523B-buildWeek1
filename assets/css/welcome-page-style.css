@@ -98,12 +98,29 @@ body {
     font-size: 16px;
 }
 
+/*bottone trasparente*/
+
+.buttontrasp2 {
+    position:relative;
+    left: 310px;
+}
+
+.buttontrasp {
+    border: 1px solid white;
+    background-color: transparent;
+    color: #0B0F3A;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    padding: 10px 75px;
+    font-size: 2em;
+}
+
 /*bottone colorato*/
 
 #proceed2 {
-    margin-left: 300px;
-    margin-right: 100px;
-    border: 6px solid #00FFFF;
+    position:relative;
+    left: 310px;
+    border: 1px solid #00FFFF;
     background-color: #0994A8;
     color: #0B0F3A;
     font-family: 'Outfit', sans-serif;
@@ -115,6 +132,9 @@ body {
     visibility: hidden;
 }
 
+.checkbox2{
+    display:inline-flex;
+}
 
 .checkbox {
     margin: 0;
