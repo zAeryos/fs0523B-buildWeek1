@@ -48,6 +48,7 @@ body {
       width: 200px;
       height: 200px;
       transform: translate(-50%, -50%) rotate(-90deg);
+      filter: drop-shadow(-6px 10px 2px rgb(0 0 2 / 0.2));
     }
     
     .progress-frame {
@@ -80,7 +81,7 @@ body {
       font-weight: 700;
     }
     .seconds{
-    font-size: 50px;
+    font-size: 35px;
     display: block;
     font-weight: 700;
     font-family: "Outfit", sans-serif;
