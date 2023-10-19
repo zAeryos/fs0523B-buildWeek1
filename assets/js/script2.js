@@ -41,8 +41,8 @@ let currentQuestionIndex = 0;
         const numDomandeElement = document.querySelector('.num_domande');
 
         questionElement.textContent = currentQuestion.question;
-        numDomandeElement.textContent = "QUESTION " + (currentQuestionIndex + 1) + "/" + questions.length;
-
+        numDomandeElement.textContent = "QUESTION " + (currentQuestionIndex + 1) + " / " + questions.length;
+        numDomandeElement.innerHTML = `QUESTION <span>${currentQuestionIndex + 1}</span><span class="red"> / 45</span>`;
         optionsElement.innerHTML = "";
         const allOptions = [currentQuestion.correct_answer, ...currentQuestion.incorrect_answers];
         shuffleArray(allOptions);
@@ -83,6 +83,35 @@ let currentQuestionIndex = 0;
     }
 
     fetchQuestions();
+
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+function startTimer() {
+    const timerElement = document.querySelector('#timer span');
+    timerElement.textContent = '60';
+
+    timer = setInterval(() => {
+        const remainingTime = parseInt(timerElement.textContent);
+        if (remainingTime > 0) {
+            timerElement.textContent = (remainingTime - 1).toString();
+        } else {
+            clearInterval(timer); // Rimuovi l'intervallo del timer quando il tempo è scaduto
+            risposta('');
+        }
+    }, 1000);
+}
+
+function resetTimer() {
+    clearInterval(timer);
+}
+
+fetchQuestions();
 
 
    
