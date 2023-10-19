@@ -99,6 +99,15 @@ body {
   color: #00ffff;
 }
 
+.result1 {
+  font-size: 20px;
+}
+
+.result2 {
+  padding-top: 8px;
+  font-size: 22px;
+}
+
 .middle_p {
   padding-top: 20px;
   font-family: "Inter", sans-serif;

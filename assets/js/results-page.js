@@ -16,9 +16,44 @@ function testResults() {
     result3.innerHTML =
       "We'll send you the certificate in few minutes. Check your email (including promotions / spam folder)";
   } else {
-    result1.innerHTML = "";
+    result1.innerHTML = "We're sorry,";
     result2.innerHTML = "You failed the exam.";
     result2.classList.add("span_color2");
-    result3.style.display = "none";
+    result3.innerHTML =
+      "You'll be contacted by your professor to try and fix your grades shortly";
   }
 }
+
+let domandeCorrette = 10;
+let domandeSbagliate = 20;
+
+const canvas = document.getElementById("my-chart");
+
+const charData = {
+  labels: ["Correct", "Wrong"],
+  data: [`${domandeCorrette}`, `${domandeSbagliate}`],
+};
+
+const myChart = document.getElementById("my-chart");
+
+new Chart(myChart, {
+  type: "doughnut",
+  data: {
+    labels: charData.labels,
+    datasets: [
+      {
+        label: "Risultati",
+        data: charData.data,
+      },
+    ],
+  },
+  options: {
+    borderWidth: 0,
+    borderRadius: 0,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
+});
