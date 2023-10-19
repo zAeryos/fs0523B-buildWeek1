@@ -83,3 +83,6 @@ let currentQuestionIndex = 0;
     }
 
     fetchQuestions();
+
+
+   

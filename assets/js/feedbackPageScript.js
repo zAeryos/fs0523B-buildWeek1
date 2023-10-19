@@ -47,13 +47,10 @@ resetStars();
 
 
 /* 
-  Tasto della welcome page
 
   Funzione per passare da pagina a pagina cancellando tutto il contenuto e crearne nuovo
 
   Timer
-
-  Feedback rating
 
   Funzione su selezione domanda che sblocca il pulsante per andare avanti
 
