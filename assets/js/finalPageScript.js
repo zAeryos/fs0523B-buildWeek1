@@ -49,6 +49,10 @@ const questionElement = document.querySelector(".titolo");
 const optionsElement = document.getElementById("formClick");
 const numDomandeElement = document.querySelector(".num_domande");
 
+const num_domandeScelto = document.querySelector(".choose").value;
+const difficolta = document.querySelector(".difficulty").value;
+console.log(num_domandeScelto);
+console.log(difficolta);
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
