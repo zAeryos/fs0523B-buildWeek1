@@ -19,7 +19,7 @@ body {
   margin-left: 80px;
   margin-right: 80px;
   margin-top: 30px;
-  display: none;
+  display:none;
 }
 
 .logo {
@@ -32,6 +32,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin-left: 5px;
 }
 
 .h2_class {
@@ -60,27 +61,30 @@ body {
   font-family: "Outfit", sans-serif;
   font-weight: 700;
   flex-grow: 1;
+  margin-right: -80px;
 }
 
 .first_section h3 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 60px;
+  margin-left: 60px;
 }
 
 .percentageCorrect {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
   font-weight: 700;
+  margin-left: 60px;
 }
 
 .question_summaryCorrect {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  margin-left: 60px;
 }
-
-.middle_section {
+.middle_section, .middle_section p {
   text-align: center;
   font-family: "Outfit", sans-serif;
   font-size: 16px;
@@ -99,6 +103,7 @@ body {
 .text-container {
   position: absolute;
   width: 250px;
+  margin-bottom: 90px;
 }
 
 .span_color2 {
@@ -142,24 +147,24 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 60px;
-  text-align: end;
+
 }
 
 .percentageWrong {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
   font-weight: 700;
-  text-align: end;
+  margin-left: 30px;
 }
 
 .question_summaryWrong {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  text-align: end;
+  margin-left: 80px;
 }
 
-/* INIZIO PROVA DONUT CON JS*/
+/*INIZIO PROVA DONUT CON JS */
 
 .chart-container {
   text-align: center;
@@ -168,9 +173,10 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+  margin-top: -125px;
 }
 
-/*FINE PROVA DONUT CON JS */
+/* FINE PROVA DONUT CON JS */
 
 #footer {
   display: flex;
@@ -178,7 +184,6 @@ body {
   justify-content: center;
   margin-bottom: 60px;
 }
-
 .buttonRateUs {
   background: none;
   border: 2px solid white;
@@ -189,20 +194,24 @@ body {
   color: white;
   font-size: 20px;
   margin-bottom:30px;
+  position: absolute;
+  bottom: -25px;
 }
 
 .buttonRateUs:hover {
   color: #0B0F3A;
   background-color: #0994A8;
-  border: 2px solid #00FFFF ;
+  border: 1px solid #00FFFF ;
   padding-top: 18px;
   padding-bottom: 18px;
-  padding-left: 65px;
-  padding-right: 65px;
+  padding-left: 68px;
+  padding-right: 68px;
   font-size: 20px;
   font-family: 'Outfit', sans-serif;
   font-weight: bold;
   margin-bottom:30px;
   filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
   cursor: pointer;
+  position: absolute;
+  bottom: -25px;
 }

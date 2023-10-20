@@ -51,6 +51,11 @@ const questionElement = document.querySelector('.titolo');
 const optionsElement = document.getElementById('formClick');
 const numDomandeElement = document.querySelector('.num_domande');
 
+// const numChosen = document.querySelector(".numChosen").valueAsNumber;
+// const diffChosen = document.querySelector(".diffChosen").value;
+// console.log(numChosen)
+// console.log(diffChosen)
+
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
@@ -64,11 +69,6 @@ optionsElement.addEventListener('click', (e) => {
 
 // JSON per fetchare le domande per il test.
 async function fetchQuestions() {
-
-    const numChosen = document.querySelector(".numChosen").valueAsNumber;
-    const diffChosen = document.querySelector(".diffChosen").value;
-    console.log(numChosen)
-    console.log(diffChosen)
 
     const response = await fetch('https://opentdb.com/api.php?amount=45&category=18&difficulty=easy');
     const data = await response.json();
