@@ -252,3 +252,4 @@ new Chart(myChart, {
         },
     });
 }
+updateTestResults();
