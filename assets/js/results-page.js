@@ -30,12 +30,13 @@ let domandeSbagliate = 20;
 const canvas = document.getElementById("my-chart");
 
 const charData = {
-  labels: ["Correct", "Wrong"],
-  data: [`${domandeCorrette}`, `${domandeSbagliate}`],
+  labels: ["Wrong", "Correct"],
+  data: [`${domandeSbagliate}`, `${domandeCorrette}`],
 };
 
 const myChart = document.getElementById("my-chart");
 
+console.log(Chart);
 new Chart(myChart, {
   type: "doughnut",
 
@@ -46,6 +47,7 @@ new Chart(myChart, {
       {
         label: "Risultati",
         data: charData.data,
+        backgroundColor: ["#D20094", "#00FFFF"],
       },
     ],
   },
@@ -53,6 +55,8 @@ new Chart(myChart, {
     cutout: 110,
     borderWidth: 0,
     borderRadius: 0,
+    cutout: 225,
+    radius: 225,
 
     plugins: {
       legend: {

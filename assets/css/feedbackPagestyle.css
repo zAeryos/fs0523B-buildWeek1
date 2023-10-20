@@ -64,7 +64,12 @@
     }
   
     .rating-star.highlighted {
-        fill: #00FFFF;
+        fill: var(--color-blue);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .rating-star.highlighted-clicked {
+        fill: var(--color-blue);
         -webkit-tap-highlight-color: transparent;
     }
 

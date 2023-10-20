@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Outfit:wght@400;700&display=swap');
+ 
+:root {
+    --color-blue: #00FFFF;
+    --color-red: #D20094;
+    --color-purple: #900080;
+}
+
+body {
+    background-image: url("../images/bg.jpg");
+    height:100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcomePage {
+    margin-left: 160px;
+    margin-top: 40px;
+}
+
+.epicodelogo {
+    height: 40px;
+    width: 170px;
+}
+
+.titoli h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 60px;
+}
+
+.titoli h4, h5 {
+    color: white;
+    font-size: 5.5em;
+}
+
+.titoli h5 {
+    font-weight:bold;
+    margin-top: -30px;
+}
+
+.titoli {
+    margin-top: 60px;
+}
+
+.h6 {
+    font-size: 2.3em;
+    color:#D20094;
+    margin-top: 35px;
+    font-weight: bold;
+}
+
+.lista ul {
+    color:white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.paragrafi {
+    margin-top: 10px;
+}
+
+.paragrafi p {
+    margin-top: 5px;
+    color:white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.lista {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.lista li {
+    margin-top: 12px;
+    color:white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.lista span {
+    font-weight:bold;
+}
+
+.aside {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.aside p {
+    margin-left: 10px;
+    font-weight: bold;
+    color:white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+}
+
+/*bottone trasparente*/
+
+.buttontrasp2 {
+    position:relative;
+    left: 310px;
+}
+
+.buttontrasp {
+    border: 1px solid white;
+    background-color: transparent;
+    color: #0B0F3A;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    padding: 10px 75px;
+    font-size: 2em;
+}
+
+/*bottone colorato*/
+
+#proceed2 {
+    position:relative;
+    left: 310px;
+    border: 1px solid #00FFFF;
+    background-color: #0994A8;
+    color: #0B0F3A;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
+    padding: 10px 75px;
+    font-size: 2em;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+label {
+    display: flex;
+}
+
+.checkbox {
+    margin: 0;
+    margin-left: 7px;
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid white;
+    transform: translateY(-0.100em);
+    -webkit-appearance: none;
+}
+  
+.checkbox:checked {
+    background-color:#00FFFF;
+}
+ 
