@@ -171,17 +171,6 @@ body {
 
 /*FINE PROVA DONUT CON JS */
 
-/* INIZIO PROVA DONUT CON JS*/
-
-.chart-container {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*FINE PROVA DONUT CON JS */
-
 #footer {
   display: flex;
   align-items: center;
