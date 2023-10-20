@@ -1,103 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap');
+:root {
+    --color-blue: #00FFFF;
+    --color-red: #D20094;
+    --color-purple: #900080;
+}
 
-    :root {
-        --color-blue: #00FFFF;
-        --color-red: #D20094;
-        --color-purple: #900080;
-    }
+body {
+    background-image: url(../images/bg.jpg);
+    color: white;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-    body {
-        background-image: url(../images/bg.jpg);
-        color: white;
-        height: 100vh;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      
 
-    .text-white {
-        color: white;
-    }
+.text-white {
+    color: white;
+}
 
-    .no-bg {
-        background: transparent;
-        border: none;
-    }
+.no-bg {
+    background: transparent;
+    border: none;
+}
 
-    .centered {
-        text-align: center;
-    }
+.centered {
+    text-align: center;
+}
 
-    .feedbackPage h4, .feedbackPage h5, .feedbackPage h6 {
-        font-family: 'Outfit', sans-serif;
-        font-weight: 700;
-        font-size: 60px;
-        line-height: 2.3;
-    }
+.feedbackPage h4, .feedbackPage h5, .feedbackPage h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 2.3;
+    margin-top: 30px;
+}
 
-    .feedbackPage p {
-        font-family: 'Inter', sans-serif;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 2;
-        word-wrap: break-word;
-    }
+.feedbackPage p {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 0;
+    margin-top: -25px;
+    line-height: 1;
+    word-wrap: break-word;
+}
 
-    #logo-container {
-        padding-left: 10vh;
-        padding-top:5vh;
-        padding-bottom:5vh;
-    }
+#logo-container {
+    padding-left: 23vh;
+    padding-top: 6vh;
+    padding-bottom:5vh;
+}
+#feedback-form input {
+    font-size: 16px;
+    width: 43%;
+    margin-top:50px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-red);
+    color:white
+}
 
-    #feedback-form input {
-        font-size: 16px;
-        width: 43%;
-        margin-top:50px;
-        padding-left: 35px;
-        padding-right: 35px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid var(--color-red);
-        color:white
-    }
+#feedback-form input:focus {
+    outline-width: 0;
+}
 
-    #feedback-form input:focus {
-        outline-width: 0;
-    }
-  
-    .rating-star.highlighted {
-        fill: var(--color-blue);
-        -webkit-tap-highlight-color: transparent;
-    }
+#stars-container{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.rating-star.highlighted {
+    fill: var(--color-blue);
+    -webkit-tap-highlight-color: transparent;
+}
 
-    .rating-star.highlighted-clicked {
-        fill: var(--color-blue);
-        -webkit-tap-highlight-color: transparent;
-    }
+.rating-star.highlighted-clicked {
+    fill: var(--color-blue);
+    -webkit-tap-highlight-color: transparent;
+}
 
-    .description-text {
-        padding-top:50px;
-        padding-bottom:50px;
-    }
+.description-text {
+    padding-top:20px;
+    padding-bottom:20px;
+}
 
-    .feedbackPage .button {
-        color: #0B0F3A;
-        background-color: #0994A8;
-        border: 6px solid #00FFFF ;
-        padding: 15px 30px;
-        margin-top: 70px;
-        margin-bottom: 50px;
-        font-size: 40px;
-        font-family: 'Outfit', sans-serif;
-        font-weight: bold;
-        filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
-    }
+.feedbackPage .button {
+    color: #0B0F3A;
+    background-color: #0994A8;
+    border: 1px solid #00FFFF ;
+    padding: 15px 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
+}
 
-    .external-link {
-        color:#0B1740;
-        text-decoration: none;
-    }
+.external-link {
+    color:#0B1740;
+    text-decoration: none;
+}
 
-    .feedbackPage {
-        display: none;
-    }
+.feedbackPage {
+    display: none;
+}

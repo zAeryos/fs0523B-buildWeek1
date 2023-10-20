@@ -51,6 +51,7 @@ const questionElement = document.querySelector('.titolo');
 const optionsElement = document.getElementById('formClick');
 const numDomandeElement = document.querySelector('.num_domande');
 
+
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
@@ -63,7 +64,13 @@ optionsElement.addEventListener('click', (e) => {
 
 // JSON per fetchare le domande per il test.
 async function fetchQuestions() {
-    const response = await fetch('https://opentdb.com/api.php?amount=5&category=18&difficulty=easy');
+
+    const numChosen = document.querySelector(".numChosen").valueAsNumber;
+    const diffChosen = document.querySelector(".diffChosen").value;
+    console.log(numChosen)
+    console.log(diffChosen)
+
+    const response = await fetch('https://opentdb.com/api.php?amount=45&category=18&difficulty=easy');
     const data = await response.json();
     questions = data.results;
     
@@ -94,7 +101,6 @@ if(currentQuestionIndex < questions.length) {
     const timerTextElement = document.querySelector(".time");
 
     // --
-    // questionElement.textContent = "Quiz completed. Final score: " + correctAnswers + " correct out of " + questions.length;
     optionsElement.style.display = "none";
     numDomandeElement.style.display = "none";
     timerElement.style.display = "none";
@@ -144,7 +150,7 @@ function startTimer() {
     // Prendo tutti gli elementi necessari in variabili e setto nuove variabili.
     const timerElement = document.querySelector('.time .seconds');
     const progressElm = document.getElementsByClassName('progress')[0];
-    const max = 5;
+    const max = 60;
     let percentage = 0;
     let circumference = 2 * Math.PI * progressElm.getAttribute('r');
 
@@ -193,13 +199,8 @@ let success = document.querySelector(".middle-section");
 let result1 = document.querySelector(".result1");
 let result2 = document.querySelector(".result2");
 let result3 = document.querySelector(".result3");
-let correctQuestions = document.querySelector("question_summaryCorrect");
-let wrongQuestions = document.querySelector("question_summaryWrong"); 
-let correctPercentage = document.querySelector(".percentageCorrect");
-let wrongPercentage = document.querySelector(".percentageWrong");
 
 let risultato = "";
-
 
 const myChart = document.getElementById("my-chart");
 
@@ -208,6 +209,20 @@ const myChart = document.getElementById("my-chart");
 function updateTestResults() {
     const totalQuestions = questions.length;
     const testScore = (correctAnswers / totalQuestions) * 100;
+
+    let correctQuestionsElement = document.querySelector(".question_summaryCorrect");
+    let wrongQuestionsElement = document.querySelector(".question_summaryWrong"); 
+    let correctPercentageElement = document.querySelector(".percentageCorrect");
+    let wrongPercentageElement = document.querySelector(".percentageWrong");
+
+    const percentageCorrect = (correctAnswers / totalQuestions) * 100;
+    const percentageIncorrect = (incorrectAnswers / totalQuestions) * 100;
+
+    correctPercentageElement.textContent = percentageCorrect.toFixed(1) + '%';
+    wrongPercentageElement.textContent = percentageIncorrect.toFixed(1) + '%';
+    correctQuestionsElement.textContent = correctAnswers + '/' + totalQuestions + ' questions';
+    wrongQuestionsElement.textContent = incorrectAnswers + '/' + totalQuestions + ' questions';
+  
 
     // questionElement.textContent = "Quiz completed. Final score: " + correctAnswers + " correct out of " + questions.length;
 

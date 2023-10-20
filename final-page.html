@@ -33,18 +33,18 @@
                 <ul>
                     <li>Each question is <span>timed</span> and can only be <span>answered once</span>.</li>
                     <li>Changing browser tab or opening other windows will <span>invalidate the question</span>.</li>
-                    <li>This exam will take approx. <span>0-5 minutes</span>.</li>
+                    <li>This exam will take approx. <span>40-45 minutes</span>.</li>
                 </ul>
             </div>
         </main>
         <section>
             <form>
-                <input type="number" name="numOfQuestions" min="0" max="60" placeholder="Choose a number of questions.">
+                <input type="number" class="numChosen" name="numOfQuestions" value="15" min="0" max="60" placeholder="Choose a number of questions.">
                 <label>
-                    <select id="select">
-                        <option>Easy</option>
-                        <option>Medium</option>
-                        <option>Hard</option>
+                    <select id="select" class="diffChosen">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
                     </select>
                 </label>
             </form>
