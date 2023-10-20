@@ -56,6 +56,10 @@ let incorrectAnswers = 0;
 let questions = [];
 let timer;
 
+optionsElement.addEventListener('click', (e) => {
+    e.preventDefault();
+})
+
 // JSON per fetchare le domande per il test.
 async function fetchQuestions() {
     const response = await fetch('https://opentdb.com/api.php?amount=5&category=18&difficulty=easy');
