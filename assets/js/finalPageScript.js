@@ -1,21 +1,24 @@
+ /* 
+    WELCOME PAGE
+ */
 
-
-//Ingresso Welcome Page
+// Ritiro checkbox e bottone welcome page
 let input = document.querySelector(".checkbox");
 let button = document.getElementById("proceed2");
 let buttonGhost = document.querySelector(".buttontrasp")
 
+// Aggiunta evento controllo checkbox per attivare il bottone
 input.addEventListener("change", stateHandle);
 
 function stateHandle() {
     if (input.checked == false) {
-
+        // Il bottone rimane bloccato
         button.style.display = "none";
         buttonGhost.style.display = "block";
         buttonGhost.style.display = "visible";
 
     } else {
-
+        // Rendo cliccabile il bottone
         button.style.display = "block";
         button.style.visibility = "visible";
         buttonGhost.style.display = "none";
@@ -23,18 +26,28 @@ function stateHandle() {
     }
 }
 
+// Al click del bottone nella welcome page, inizializzo il timer delle domande 
 button.addEventListener("click", startTimer);
 
-//Ingresso Question Page 
-let containWelcome = document.querySelector(".container");
-let containQuestion = document.querySelector(".contenin2");
+// Metto i container delle pagine in variabili
+let containWelcome = document.querySelector(".welcomePage");
+let containQuestion = document.querySelector(".questionsPage");
 
+// Al click del bottone nella welcome page, nascondo la prima pagina e mostro la seconda
 button.addEventListener("click", changePage);
-
 function changePage() {
     containWelcome.style.display = "none";
     containQuestion.style.display = "block";
 }
+
+/* 
+    QUESTIONS PAGE
+*/
+
+// Variabili per lo scoring delle domande, timer etc 
+const questionElement = document.querySelector('.titolo');
+const optionsElement = document.getElementById('formClick');
+const numDomandeElement = document.querySelector('.num_domande');
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
@@ -42,67 +55,19 @@ let incorrectAnswers = 0;
 let questions = [];
 let timer;
 
-let risultato = "";
-let success = document.querySelector(".middle-section");
-let result1 = document.querySelector(".result1");
-let result2 = document.querySelector(".result2");
-let result3 = document.querySelector(".result3");
-const myChart = document.getElementById("my-chart");
-
-function updateTestResults() {
-const totalQuestions = questions.length;
-const testScore = (correctAnswers / totalQuestions) * 100;
-
-if (testScore >= 60) {
-  result1.innerHTML = "Congratulations!";
-    result2.innerHTML = "You passed the exam.";
-     result2.classList.add("span_color");
-    result3.innerHTML = "We'll send you the certificate in a few minutes. Check your email (including promotions / spam folder)";
-}else{
-  result1.innerHTML = "We're sorry,";
-    result2.innerHTML = "You failed the exam.";
-      result2.classList.add("span_color2");
-      result3.innerHTML = "You'll be contacted by your professor to try and fix your grades shortly";
-  }
-
-
-  const chartData = {
-        labels: ["Correct", "Wrong"],
-        data: [correctAnswers, incorrectAnswers],
-    };
-
-new Chart(myChart, {
-  type: "doughnut",
-  data: {
-  labels: chartData.labels,
-    datasets: [
-          {
-          label: "Risultati",
-          data: chartData.data,
-        },
-      ],
-  },
-    options: {
-        borderWidth: 0,
-        borderRadius: 0,
-        plugins: {
-        legend: {
-  display: false,
-                },
-            },
-        },
-    });
-}
-
+// JSON per fetchare le domande per il test.
 async function fetchQuestions() {
-    const response = await fetch('https://opentdb.com/api.php?amount=45&category=18&difficulty=easy');
+    const response = await fetch('https://opentdb.com/api.php?amount=5&category=18&difficulty=easy');
     const data = await response.json();
     questions = data.results;
     
+    // Richiamo le funzioni per randomizzare e mostrare le domande.
     shuffleArray(questions);
     visualizzaDomandaCorrente();
 }
 
+
+// Gestisce lo score delle risposte.
 function risposta(opzione) {
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -112,30 +77,32 @@ function risposta(opzione) {
   incorrectAnswers++;
 }
 
+// Mostro la nuova domanda.
 currentQuestionIndex++;
-
 if(currentQuestionIndex < questions.length) {
     visualizzaDomandaCorrente();
-}else{
-    const questionElement = document.querySelector('.titolo');
-  const optionsElement = document.getElementById('formClick');
-    const numDomandeElement = document.querySelector('.num_domande');
+} else {
+    
+    // Seleziono gli elementi da nascondere
+    const timerElement = document.querySelector(".timer");
+    const timerTextElement = document.querySelector(".time");
 
-  questionElement.textContent = "Quiz completed. Final score: " + correctAnswers + " correct out of " + questions.length;
+    // --
+    questionElement.textContent = "Quiz completed. Final score: " + correctAnswers + " correct out of " + questions.length;
     optionsElement.style.display = "none";
-  numDomandeElement.style.display = "none";
+    numDomandeElement.style.display = "none";
+    timerElement.style.display = "none";
+    timerTextElement.style.display = "none";
 
-  clearPreviousTimer();
+    clearPreviousTimer();
 
-  
   }
 }
 
+// Logica per mostrare una nuova domanda
 function visualizzaDomandaCorrente() {
-    const questionElement = document.querySelector('.titolo');
-    const optionsElement = document.getElementById('formClick');
+
     const currentQuestion = questions[currentQuestionIndex];
-    const numDomandeElement = document.querySelector('.num_domande');
 
     questionElement.textContent = currentQuestion.question;
     numDomandeElement.textContent = "QUESTION " + (currentQuestionIndex + 1) + " / " + questions.length;
@@ -151,9 +118,11 @@ function visualizzaDomandaCorrente() {
         optionsElement.appendChild(button);
     });
 
+    // Richiamo il timer una volta mostrata una nuova domanda
     startTimer();
 }
 
+// Funzione per la randomizzazione delle domande
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -161,10 +130,13 @@ function shuffleArray(array) {
     }
 }
 
+// Funzione per inizializzare il timer
 function startTimer() {
+
+    // Prendo tutti gli elementi necessari in variabili e setto nuove variabili
     const timerElement = document.querySelector('.time .seconds');
     const progressElm = document.getElementsByClassName('progress')[0];
-    const max = 60;
+    const max = 5;
     let percentage = 0;
     let circumference = 2 * Math.PI * progressElm.getAttribute('r');
 
@@ -172,8 +144,11 @@ function startTimer() {
     progressElm.style.strokeDasharray = circumference;
     progressElm.style.strokeDashoffset = circumference * 0;
 
+    // Richiamo la funzione per bloccare il timer precedente
     clearPreviousTimer();
 
+
+    // Controllo del tempo rimanente e gestione dello stile del donut
     timer = setInterval(() => {
         let remainingTime = parseInt(timerElement.textContent);
 
@@ -190,8 +165,83 @@ function startTimer() {
     }, 1000);
 }
 
+// Funzione per bloccare il timer precedentemente inizializzato
 function clearPreviousTimer() {
     clearInterval(timer);
 }
 
+
+// Richiamo la funzione per il fetch delle domande
 fetchQuestions();
+
+/* 
+    RESULTS PAGE
+*/
+
+// Prendo le variabili e gli elementi necessari dalla pagina
+let risultato = "";
+let success = document.querySelector(".middle-section");
+let result1 = document.querySelector(".result1");
+let result2 = document.querySelector(".result2");
+let result3 = document.querySelector(".result3");
+const myChart = document.getElementById("my-chart");
+
+// Funzione per cambiare il testo della pagina results in base allo score 
+function updateTestResults() {
+const totalQuestions = questions.length;
+const testScore = (correctAnswers / totalQuestions) * 100;
+
+// Se lo score del test è del 60% o superiore, congratulazioni!
+if (testScore >= 60) {
+
+    result1.innerHTML = "Congratulations!";
+    result2.innerHTML = "You passed the exam.";
+    result2.classList.add("span_color");
+    result3.innerHTML = "We'll send you the certificate in a few minutes. Check your email (including promotions / spam folder)";
+
+} else { // Altrimenti sei bocciato hehe
+
+    result1.innerHTML = "We're sorry,";
+    result2.innerHTML = "You failed the exam.";
+    result2.classList.add("span_color2");
+    result3.innerHTML = "You'll be contacted by your professor to try and fix your grades shortly";
+
+  }
+
+// let domandeCorrette = 20;
+// let domandeSbagliate = 20;
+
+
+// Chart con i dettagli delle domande sbagliate / corrette
+const chartData = {
+    labels: ["Correct", "Wrong"],
+    data: [`${correctAnswers}`, `${incorrectAnswers}`],
+};
+
+// Creazione del chart
+new Chart(myChart, {
+  type: "doughnut",
+  data: {
+  labels: chartData.labels,
+    datasets: [
+          {
+          label: "Risultati",
+          data: chartData.data,
+          backgroundColor: ["#D20094", "#00FFFF"],
+        },
+      ],
+  },
+    options: {
+        borderWidth: 0,
+        borderRadius: 0,
+        cutout: 250,
+        radius: 250,
+
+        plugins: {
+        legend: {
+            display: false,
+                },
+            },
+        },
+    });
+}
