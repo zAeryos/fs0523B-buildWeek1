@@ -6,6 +6,16 @@
         --color-purple: #900080;
     }
 
+    body {
+        background-image: url(../images/bg.jpg);
+        color: white;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+
     .text-white {
         color: white;
     }
@@ -19,7 +29,7 @@
         text-align: center;
     }
 
-    .feedbackPage h4, h5, h6 {
+    .feedbackPage h4, .feedbackPage h5, .feedbackPage h6 {
         font-family: 'Outfit', sans-serif;
         font-weight: 700;
         font-size: 60px;

@@ -68,13 +68,13 @@ body {
   font-size: 60px;
 }
 
-.percentage {
+.percentageCorrect {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
   font-weight: 700;
 }
 
-.question_summary {
+.question_summaryCorrect {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -85,7 +85,8 @@ body {
   font-family: "Outfit", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  flex-grow: 3;
+  flex-grow: 1;
+  position: relative;
 }
 
 .programming-stats {
@@ -97,7 +98,7 @@ body {
 
 .text-container {
   position: absolute;
-  width: 280px;
+  width: 250px;
 }
 
 .span_color2 {
@@ -144,14 +145,14 @@ body {
   text-align: end;
 }
 
-.percentage2 {
+.percentageWrong {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
   font-weight: 700;
   text-align: end;
 }
 
-.question_summary2 {
+.question_summaryWrong {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -178,7 +179,7 @@ body {
   margin-bottom: 60px;
 }
 
-.button {
+.buttonRateUs {
   background: none;
   border: 2px solid white;
   padding-top: 18px;
@@ -190,7 +191,7 @@ body {
   margin-bottom: 30px;
 }
 
-.button:hover {
+.buttonRateUs:hover {
   color: #0b0f3a;
   background-color: #0994a8;
   border: 2px solid #00ffff;
