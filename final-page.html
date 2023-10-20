@@ -5,42 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
     content="Welcome to your exam, become web developer with Epicode."/>
-    <link rel="stylesheet" href="assets/css/reset.css"/>
-    <link rel="stylesheet" href="assets/css/final-page-style.css"/>
+    <link rel="stylesheet" href="./assets/css/reset.css"/>
+    <link rel="stylesheet" href="./assets/css/final-page-style.css"/>
     <link rel="stylesheet" href="./assets/css/style-question.css" />
+    <link rel="stylesheet" href="./assets/css/results-page.css">
     <title>Welcome to your Exam - Epicode</title>
 </head>
 
 <body>
-    <div class="container">
-      <img src="assets/images/epicode_logo.png" class="epicodelogo" alt="Epicode">
+
+    <!-- WELCOME PAGE -->
+    <div class="welcomePage">
+        <img src="assets/images/epicode_logo.png" class="epicodelogo" alt="Epicode">
+
         <main>
             <div class="titoli">
                 <h4>Welcome to</h4>
                 <h5>your exam</h5>
             </div>
-                <h6 class="h6">Instructions</h6>
-                    <div class="paragrafi">
-                        <p>We don't expect most engineers to know the answers to all of these</p>
-                        <p>questions, so don't worry if you're unsure of a few of them.</p>
-                    </div>
-                        <div class="lista">
-                            <ul>
-                                <li>Each question is <span>timed</span> and can only be <span>answered once</span>.</li>
-                                <li>Changing browser tab or opening other windows will <span>invalidate the question</span>.</li>
-                                <li>This exam will take approx. <span>0-5 minutes</span>.</li>
-                            </ul>
-                        </div>
+            <h6 class="h6">Instructions</h6>
+            <div class="paragrafi">
+                <p>We don't expect most engineers to know the answers to all of these</p>
+                <p>questions, so don't worry if you're unsure of a few of them.</p>
+            </div>
+            <div class="lista">
+                <ul>
+                    <li>Each question is <span>timed</span> and can only be <span>answered once</span>.</li>
+                    <li>Changing browser tab or opening other windows will <span>invalidate the question</span>.</li>
+                    <li>This exam will take approx. <span>0-5 minutes</span>.</li>
+                </ul>
+            </div>
         </main>
-            <aside class="aside">
-           <div class="checkbox2"><input class="checkbox" type="checkbox" name="promise" value="promise"><p>I promise to answer myself without help from anyone</p></div>
-            <div class="buttontrasp2"><input class="buttontrasp" type="button" value="PROCEED"/></div>
-            <input id="proceed2" type="button" value="PROCEED"/>
-            </aside>
-    </div>
-    <script src="assets/js/finalPageScript.js"></script>
 
-    <div class="contenin2">
+        <aside class="aside">
+            <div class="checkbox2">
+                <label>
+                    <input class="checkbox" type="checkbox" name="promise" value="promise"><p>I promise to answer myself without help from anyone</p>
+                </label>
+            </div>
+
+            <div class="buttontrasp2">
+                <input class="buttontrasp" type="button" value="PROCEED"/>
+            </div>
+
+            <input id="proceed2" type="button" value="PROCEED"/>
+        </aside>
+    </div>
+
+    <!-- QUESTIONS PAGE -->
+    <div class="questionsPage">
         <div class="imagine">
               <img
                     src="./assets/images/epicode_logo.png"
@@ -49,30 +62,93 @@
                     height="40px"
               />
         </div>
+
         <div id="question">
               <p class="titolo">
                     How can I create a checkbox in HTML?
               </p>
         </div>
+        
+        <svg class="timer">
+            <circle class="progress-frame" cx="100" cy="100" r="60" ></circle>
+            <circle class="progress" cx="100" cy="100" r="60"></circle>
+        </svg>
 
-        <p id="timer">second <span>16</span>reading</p>
+        <div class="time">
+            <p>SECONDS<span class="seconds">60</span>REMAINING</p>
+        </div>
+
         <form id="formClick">
               <button type="button" class="bot1">
-                    <p class="white">ciao</p>
+                    <p class="white"></p>
               </button>
-              <button type="button" class="bot2">ciao</button>
-              <button type="button" class="bot3">ciao</button>
-              <button type="button" class="bot4">ciao</button>
+              <button type="button" class="bot2"></button>
+              <button type="button" class="bot3"></button>
+              <button type="button" class="bot4"></button>
         </form>
+
         <div class="footer">
-              <p class="num_domande">
-                    QUESTION 1<span class="red">/10</span>
-              </p>
-              <div class="prossima">
-                    <button id="bottone" disabled>NEXT →</button>
-              </div>
+            <p class="num_domande">
+                QUESTION 1<span class="red">/10</span>
+            </p>
         </div>
-  </div>
-  <script src="assets/js/script2.js"></script>
+    </div>
+
+  <!-- RESULTS PAGE -->
+    <div class="resultsPage">
+        <div>
+            <img class="logo" src="./assets/images/epicode_logo.png" />
+        </div>
+
+        <div class="head_container">
+            <div class="h2_class">
+                <h2>Results</h2>
+            </div>
+
+            <div class="head_p">
+                <p>The summary of your answers:</p>
+            </div>
+        </div>
+
+        <div class="main_container">
+            <section class="first_section">
+                <h3>Correct</h3>
+                <p class="percentage">66.7%</p>
+                <p class="question_summary">4/6 questions</p>
+            </section>
+
+        <section class="middle_section">
+            <div class="programming-stats">
+                <div class="text-container">
+                    <p class="result1">Congratulations!</p>
+                    <p class="result2">
+                    <span class="span_color">You passed the exam.</span>
+                    </p>
+                    <div class="middle_p">
+                        <p class="result3">
+                        We'll send you the certificate in few minutes. Check your
+                        email (including promotions / spam folder)
+                        </p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                <canvas id="my-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="last_section">
+            <h4>Wrong</h4>
+            <p class="percentage2">33.3%</p>
+            <p class="question_summary2">2/6 questions</p>
+        </section>
+      </div>
+            <footer id="footer">
+                <button class="button">RATE US</button>
+            </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/finalPageScript.js"></script>
 </body>
 </html>
