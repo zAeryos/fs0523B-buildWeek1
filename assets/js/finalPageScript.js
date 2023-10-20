@@ -2,23 +2,23 @@
     WELCOME PAGE
  */
 
-// Ritiro checkbox e bottone welcome page
+// Ritiro checkbox e bottone welcome page.
 let input = document.querySelector(".checkbox");
 let button = document.getElementById("proceed2");
-let buttonGhost = document.querySelector(".buttontrasp")
+let buttonGhost = document.querySelector(".buttontrasp");
 
-// Aggiunta evento controllo checkbox per attivare il bottone
+// Aggiunta evento controllo checkbox per attivare il bottone.
 input.addEventListener("change", stateHandle);
 
 function stateHandle() {
     if (input.checked == false) {
-        // Il bottone rimane bloccato
+        // Il bottone rimane bloccato.
         button.style.display = "none";
         buttonGhost.style.display = "block";
         buttonGhost.style.display = "visible";
 
     } else {
-        // Rendo cliccabile il bottone
+        // Rendo cliccabile il bottone.
         button.style.display = "block";
         button.style.visibility = "visible";
         buttonGhost.style.display = "none";
@@ -26,25 +26,26 @@ function stateHandle() {
     }
 }
 
-// Al click del bottone nella welcome page, inizializzo il timer delle domande 
+// Al click del bottone nella welcome page, inizializzo il timer delle domande .
 button.addEventListener("click", startTimer);
 
-// Metto i container delle pagine in variabili
-let containWelcome = document.querySelector(".welcomePage");
-let containQuestion = document.querySelector(".questionsPage");
+// Metto i container delle pagine in variabili.
+let welcomePage = document.querySelector(".welcomePage");
+let questionsPage = document.querySelector(".questionsPage");
+let resultsPage = document.querySelector(".resultsPage");
 
-// Al click del bottone nella welcome page, nascondo la prima pagina e mostro la seconda
+// Al click del bottone nella welcome page, nascondo la prima pagina e mostro la seconda.
 button.addEventListener("click", changePage);
 function changePage() {
-    containWelcome.style.display = "none";
-    containQuestion.style.display = "block";
+    welcomePage.style.display = "none";
+    questionsPage.style.display = "block";
 }
 
 /* 
     QUESTIONS PAGE
 */
 
-// Variabili per lo scoring delle domande, timer etc 
+// Variabili per lo scoring delle domande, timer etc.
 const questionElement = document.querySelector('.titolo');
 const optionsElement = document.getElementById('formClick');
 const numDomandeElement = document.querySelector('.num_domande');
@@ -54,6 +55,10 @@ let correctAnswers = 0;
 let incorrectAnswers = 0;
 let questions = [];
 let timer;
+
+optionsElement.addEventListener('click', (e) => {
+    e.preventDefault();
+})
 
 // JSON per fetchare le domande per il test.
 async function fetchQuestions() {
@@ -83,23 +88,25 @@ if(currentQuestionIndex < questions.length) {
     visualizzaDomandaCorrente();
 } else {
     
-    // Seleziono gli elementi da nascondere
+    // Seleziono gli elementi da nascondere.
     const timerElement = document.querySelector(".timer");
     const timerTextElement = document.querySelector(".time");
 
     // --
-    questionElement.textContent = "Quiz completed. Final score: " + correctAnswers + " correct out of " + questions.length;
+    // questionElement.textContent = "Quiz completed. Final score: " + correctAnswers + " correct out of " + questions.length;
     optionsElement.style.display = "none";
     numDomandeElement.style.display = "none";
     timerElement.style.display = "none";
     timerTextElement.style.display = "none";
+    questionsPage.style.display = "none";
+    resultsPage.style.display = "block";
 
     clearPreviousTimer();
 
   }
 }
 
-// Logica per mostrare una nuova domanda
+// Logica per mostrare una nuova domanda.
 function visualizzaDomandaCorrente() {
 
     const currentQuestion = questions[currentQuestionIndex];
@@ -118,11 +125,11 @@ function visualizzaDomandaCorrente() {
         optionsElement.appendChild(button);
     });
 
-    // Richiamo il timer una volta mostrata una nuova domanda
+    // Richiamo il timer una volta mostrata una nuova domanda.
     startTimer();
 }
 
-// Funzione per la randomizzazione delle domande
+// Funzione per la randomizzazione delle domande.
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -130,10 +137,10 @@ function shuffleArray(array) {
     }
 }
 
-// Funzione per inizializzare il timer
+// Funzione per inizializzare il timer.
 function startTimer() {
 
-    // Prendo tutti gli elementi necessari in variabili e setto nuove variabili
+    // Prendo tutti gli elementi necessari in variabili e setto nuove variabili.
     const timerElement = document.querySelector('.time .seconds');
     const progressElm = document.getElementsByClassName('progress')[0];
     const max = 5;
@@ -144,11 +151,11 @@ function startTimer() {
     progressElm.style.strokeDasharray = circumference;
     progressElm.style.strokeDashoffset = circumference * 0;
 
-    // Richiamo la funzione per bloccare il timer precedente
+    // Richiamo la funzione per bloccare il timer precedente.
     clearPreviousTimer();
 
 
-    // Controllo del tempo rimanente e gestione dello stile del donut
+    // Controllo del tempo rimanente e gestione dello stile del donut.
     timer = setInterval(() => {
         let remainingTime = parseInt(timerElement.textContent);
 
@@ -165,20 +172,20 @@ function startTimer() {
     }, 1000);
 }
 
-// Funzione per bloccare il timer precedentemente inizializzato
+// Funzione per bloccare il timer precedentemente inizializzato.
 function clearPreviousTimer() {
     clearInterval(timer);
 }
 
 
-// Richiamo la funzione per il fetch delle domande
+// Richiamo la funzione per il fetch delle domande.
 fetchQuestions();
 
 /* 
     RESULTS PAGE
 */
 
-// Prendo le variabili e gli elementi necessari dalla pagina
+// Prendo le variabili e gli elementi necessari dalla pagina.
 let risultato = "";
 let success = document.querySelector(".middle-section");
 let result1 = document.querySelector(".result1");
@@ -186,7 +193,7 @@ let result2 = document.querySelector(".result2");
 let result3 = document.querySelector(".result3");
 const myChart = document.getElementById("my-chart");
 
-// Funzione per cambiare il testo della pagina results in base allo score 
+// Funzione per cambiare il testo della pagina results in base allo score.
 function updateTestResults() {
 const totalQuestions = questions.length;
 const testScore = (correctAnswers / totalQuestions) * 100;
@@ -199,7 +206,7 @@ if (testScore >= 60) {
     result2.classList.add("span_color");
     result3.innerHTML = "We'll send you the certificate in a few minutes. Check your email (including promotions / spam folder)";
 
-} else { // Altrimenti sei bocciato hehe
+} else { // Altrimenti sei bocciato hehe.
 
     result1.innerHTML = "We're sorry,";
     result2.innerHTML = "You failed the exam.";
@@ -212,13 +219,13 @@ if (testScore >= 60) {
 // let domandeSbagliate = 20;
 
 
-// Chart con i dettagli delle domande sbagliate / corrette
+// Chart con i dettagli delle domande sbagliate / corrette.
 const chartData = {
     labels: ["Correct", "Wrong"],
     data: [`${correctAnswers}`, `${incorrectAnswers}`],
 };
 
-// Creazione del chart
+// Creazione del chart.
 new Chart(myChart, {
   type: "doughnut",
   data: {
