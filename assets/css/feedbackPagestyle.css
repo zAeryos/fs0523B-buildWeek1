@@ -6,14 +6,6 @@
         --color-purple: #900080;
     }
 
-    body {
-        background-image: url(../images/bg.jpg);
-        height: 100vh;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
     .text-white {
         color: white;
     }
@@ -27,14 +19,14 @@
         text-align: center;
     }
 
-    h4, h5, h6 {
+    .feedbackPage h4, h5, h6 {
         font-family: 'Outfit', sans-serif;
         font-weight: 700;
         font-size: 60px;
         line-height: 2.3;
     }
 
-    p {
+    .feedbackPage p {
         font-family: 'Inter', sans-serif;
         font-weight: 400;
         font-size: 32px;
@@ -78,7 +70,7 @@
         padding-bottom:50px;
     }
 
-    .button {
+    .feedbackPage .button {
         color: #0B0F3A;
         background-color: #0994A8;
         border: 6px solid #00FFFF ;
@@ -94,4 +86,8 @@
     .external-link {
         color:#0B1740;
         text-decoration: none;
+    }
+
+    .feedbackPage {
+        display: none;
     }
