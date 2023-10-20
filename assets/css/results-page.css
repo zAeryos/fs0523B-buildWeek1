@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Outfit:wght@400;700&display=swap');
 
-root {
+:root {
   --color-blue: #00ffff;
   --color-red: #d20094;
   --color-purple: #900080;
@@ -15,14 +15,16 @@ body {
   background-size: cover;
 }
 
-.container {
+.resultsPage {
   margin-left: 80px;
   margin-right: 80px;
   margin-top: 30px;
+  /* display: none; */
 }
 
 .logo {
-  height: 20px;
+  height: 40px;
+  width: 170px;
   margin-bottom: 20px;
 }
 
@@ -34,7 +36,7 @@ body {
 
 .h2_class {
   font-family: "Outfit", sans-serif;
-  font-size: 30px;
+  font-size: 60px;
   font-weight: 700;
   text-align: center;
 }
@@ -44,10 +46,10 @@ body {
   font-weight: 400;
   text-align: center;
   margin-top: 10px;
+  font-size: 30px;
 }
 
 .main_container {
-  margin-top: 100px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -57,40 +59,69 @@ body {
 .first_section {
   font-family: "Outfit", sans-serif;
   font-weight: 700;
-  flex-basis: 0;
   flex-grow: 1;
 }
 
 .first_section h3 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 60px;
 }
 
 .percentage {
   font-family: "Outfit", sans-serif;
-  font-size: 30px;
+  font-size: 60px;
   font-weight: 700;
 }
 
 .question_summary {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 .middle_section {
   text-align: center;
-
   font-family: "Outfit", sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 700;
-  flex-basis: 0;
   flex-grow: 1;
+}
+
+.programming-stats {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  position: absolute;
+  width: 280px;
+}
+
+.span_color2 {
+  color: red;
 }
 
 .span_color {
   color: #00ffff;
+}
+
+.result1 {
+  font-size: 20px;
+}
+
+.result2 {
+  padding-top: 8px;
+  font-size: 22px;
+  padding-bottom: 23px;
+}
+
+.result3 {
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .middle_p {
@@ -101,22 +132,21 @@ body {
 
 .last_section {
   font-family: "Outfit", sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 700;
-  flex-basis: 0;
   flex-grow: 1;
 }
 
 .last_section h4 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 60px;
   text-align: end;
 }
 
 .percentage2 {
   font-family: "Outfit", sans-serif;
-  font-size: 30px;
+  font-size: 60px;
   font-weight: 700;
   text-align: end;
 }
@@ -124,54 +154,65 @@ body {
 .question_summary2 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 16px;
   text-align: end;
 }
 
-/* PROVA CERCHIOOOOOOOOOOOOOOOOOOOOOOO */
+/* INIZIO PROVA DONUT CON JS*/
 
-.container_test {
+.chart-container {
+  text-align: center;
   display: flex;
-  width: 420px;
-  padding: 50px 0;
-  border-radius: 8px;
-  background: #fff;
-  row-gap: 30%;
-  flex-direction: column;
-  align-items: center;
-}
-
-.circular-progress {
-  position: relative;
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
-  background-color: rgba(128, 0, 128, 0);
-  background: conic-gradient(#d20094 3.6deg, #00ffff 0deg);
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.progress-value {
-  position: relative;
+/*FINE PROVA DONUT CON JS */
+
+/* INIZIO PROVA DONUT CON JS*/
+
+.chart-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* FINE PROVA CERCHIOOOOOOOOOOOOOOOOOOOOOOOOO*/
+/*FINE PROVA DONUT CON JS */
 
 #footer {
-  margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
 .button {
   background: none;
-  border: 1px solid white;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 40px;
-  padding-right: 40px;
+  border: 2px solid white;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 65px;
+  padding-right: 65px;
   color: white;
+  font-size: 20px;
+  margin-bottom:30px;
+}
+
+.button:hover {
+  color: #0B0F3A;
+  background-color: #0994A8;
+  border: 2px solid #00FFFF ;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 65px;
+  padding-right: 65px;
+  font-size: 20px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: bold;
+  margin-bottom:30px;
+  filter: drop-shadow(0 0 18px #196eeea9)contrast(2) brightness(2);
+  cursor: pointer;
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Outfit:wght@400;700&display=swap");
 
 :root {
       --color-blue: #00ffff;
@@ -13,14 +13,15 @@ body {
       background-size: cover;
 }
 
-#contenin2 {
+.questionsPage {
       box-sizing: content-box;
-
       color: white;
+      display: none;
 }
 .imagine {
-      padding-left: 100px;
-      padding-top: 20px;
+      padding-left: 120px;
+      padding-top: 40px;
+      margin-left: 40px;
 }
 
 .titolo {
@@ -28,7 +29,7 @@ body {
       font-weight: 300;
       font-weight: lighter;
       text-align: center;
-      font-size: 60px;
+      font-size: 1.5em;
       margin-top: 160px;
 }
 #bold {
@@ -39,11 +40,53 @@ body {
       font-size: 60px;
       margin-bottom: 50px;
 }
-#timer {
+
+.timer {
       position: absolute;
-      top: 80px;
-      right: 60px;
+      top: 150px;
+      right: 57px;
+      width: 200px;
+      height: 200px;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      filter: drop-shadow(-6px 10px 2px rgb(0 0 2 / 0.2));
 }
+
+.progress-frame {
+      fill: transparent;
+      stroke: white;
+      stroke-width: 20px;
+}
+
+.progress {
+      fill: transparent;
+      stroke: #9b1e8d;
+      stroke-width: 21px;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 1s;
+}
+
+.time {
+      position: absolute;
+      top: 150px;
+      right: 191px;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      color: rgb(238, 238, 238);
+      text-align: center;
+      font-weight: bold;
+}
+.time p {
+      font-size: 12px;
+      font-family: "Outfit", sans-serif;
+      font-weight: 700;
+}
+.seconds {
+      font-size: 35px;
+      display: block;
+      font-weight: 700;
+      font-family: "Outfit", sans-serif;
+}
+
 #formClick {
       align-items: center;
       justify-content: center;
@@ -86,7 +129,7 @@ body {
 }
 .num_domande {
       text-align: center;
-      font-size: 20px;
+      font-size: 1rem;
       font-weight: bold;
       font-family: "Inter", sans-serif;
       margin-left: 200px;
@@ -101,13 +144,18 @@ body {
       margin-top: 100px;
       margin-left: 100px;
 }
-
+.num_domande {
+      margin-left: 80px;
+      margin-top: -38px;
+}
 .prossima {
       position: relative;
       left: 50%;
+      bottom: 50px;
 }
 
 #bottone {
+      margin-left: 80px;
       padding-top: 10px;
       padding-bottom: 10px;
       padding-left: 30px;
@@ -115,8 +163,8 @@ body {
       background-color: transparent;
       color: rgb(255, 255, 255);
       border: 2px solid rgba(214, 211, 211, 0.938);
-      height: 70px;
-      width: 280px;
+      height: 55px;
+      width: 260px;
       font-weight: bold;
       font-size: 1.4rem;
       cursor: pointer;
