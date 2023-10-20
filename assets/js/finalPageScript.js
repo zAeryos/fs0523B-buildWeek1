@@ -31,6 +31,7 @@ button.addEventListener("click", startTimer);
 let welcomePage = document.querySelector(".welcomePage");
 let questionsPage = document.querySelector(".questionsPage");
 let resultsPage = document.querySelector(".resultsPage");
+let feedbackPage = document.querySelector(".feedbackPage");
 
 // Al click del bottone nella welcome page, nascondo la prima pagina e mostro la seconda.
 button.addEventListener("click", changePage);
@@ -100,6 +101,7 @@ function risposta(opzione) {
             resultsPage.style.display = "block";
 
             clearPreviousTimer();
+            updateTestResults();
       }
 }
 
@@ -181,23 +183,33 @@ function clearPreviousTimer() {
 
 // Richiamo la funzione per il fetch delle domande.
 fetchQuestions();
+clearPreviousTimer();
 
 /* 
     RESULTS PAGE
 */
 
 // Prendo le variabili e gli elementi necessari dalla pagina.
-let risultato = "";
+let rateUsButton = document.querySelector(".buttonRateUs");
 let success = document.querySelector(".middle-section");
 let result1 = document.querySelector(".result1");
 let result2 = document.querySelector(".result2");
 let result3 = document.querySelector(".result3");
+let correctQuestions = document.querySelector("question_summaryCorrect");
+let wrongQuestions = document.querySelector("question_summaryWrong");
+let correctPercentage = document.querySelector(".percentageCorrect");
+let wrongPercentage = document.querySelector(".percentageWrong");
+
+let risultato = "";
+
 const myChart = document.getElementById("my-chart");
 
-// Funzione per cambiare il testo della pagina results in base allo score.
+// Creo e richiamo la funzione per cambiare il testo della pagina results in base allo score.
 function updateTestResults() {
       const totalQuestions = questions.length;
       const testScore = (correctAnswers / totalQuestions) * 100;
+
+      // questionElement.textContent = "Quiz completed. Final score: " + correctAnswers + " correct out of " + questions.length;
 
       // Se lo score del test è del 60% o superiore, congratulazioni!
       if (testScore >= 60) {
@@ -207,7 +219,7 @@ function updateTestResults() {
             result3.innerHTML =
                   "We'll send you the certificate in a few minutes. Check your email (including promotions / spam folder)";
       } else {
-            // Altrimenti sei bocciato hehe.
+            // Altrimenti sei bocciato.
 
             result1.innerHTML = "We're sorry,";
             result2.innerHTML = "You failed the exam.";
@@ -216,13 +228,10 @@ function updateTestResults() {
                   "You'll be contacted by your professor to try and fix your grades shortly";
       }
 
-      // let domandeCorrette = 20;
-      // let domandeSbagliate = 20;
-
       // Chart con i dettagli delle domande sbagliate / corrette.
       const chartData = {
-            labels: ["Correct", "Wrong"],
-            data: [`${correctAnswers}`, `${incorrectAnswers}`],
+            labels: ["Wrong", "Correct"],
+            data: [`${incorrectAnswers}`, `${correctAnswers}`],
       };
 
       // Creazione del chart.
@@ -241,14 +250,20 @@ function updateTestResults() {
             options: {
                   borderWidth: 0,
                   borderRadius: 0,
-                  cutout: 250,
-                  radius: 250,
-
-                  plugins: {
-                        legend: {
-                              display: false,
-                        },
+                  cutout: 210,
+                  radius: 210,
+            },
+            plugins: {
+                  legend: {
+                        display: false,
                   },
             },
       });
+}
+
+rateUsButton.addEventListener("click", resultsToFeedback);
+
+function resultsToFeedback() {
+      resultsPage.style.display = "none";
+      feedbackPage.style.display = "block";
 }
