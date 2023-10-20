@@ -19,7 +19,7 @@ body {
   margin-left: 80px;
   margin-right: 80px;
   margin-top: 30px;
-  display: none;
+  /* display: none; */
 }
 
 .logo {
@@ -68,13 +68,13 @@ body {
   font-size: 60px;
 }
 
-.percentage {
+.percentageCorrect {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
   font-weight: 700;
 }
 
-.question_summary {
+.question_summaryCorrect {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -86,6 +86,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   flex-grow: 3;
+  position: relative;
 }
 
 .programming-stats {
@@ -144,14 +145,14 @@ body {
   text-align: end;
 }
 
-.percentage2 {
+.percentageWrong {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
   font-weight: 700;
   text-align: end;
 }
 
-.question_summary2 {
+.question_summaryWrong {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -178,7 +179,7 @@ body {
   margin-bottom: 60px;
 }
 
-.button {
+.buttonRateUs {
   background: none;
   border: 2px solid white;
   padding-top: 18px;
@@ -190,7 +191,7 @@ body {
   margin-bottom:30px;
 }
 
-.button:hover {
+.buttonRateUs:hover {
   color: #0B0F3A;
   background-color: #0994A8;
   border: 2px solid #00FFFF ;

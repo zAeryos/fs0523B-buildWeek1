@@ -33,6 +33,7 @@ button.addEventListener("click", startTimer);
 let welcomePage = document.querySelector(".welcomePage");
 let questionsPage = document.querySelector(".questionsPage");
 let resultsPage = document.querySelector(".resultsPage");
+let feedbackPage = document.querySelector(".feedbackPage")
 
 // Al click del bottone nella welcome page, nascondo la prima pagina e mostro la seconda.
 button.addEventListener("click", changePage);
@@ -180,18 +181,23 @@ function clearPreviousTimer() {
 
 // Richiamo la funzione per il fetch delle domande.
 fetchQuestions();
+clearPreviousTimer();
 
 /* 
     RESULTS PAGE
 */
 
 // Prendo le variabili e gli elementi necessari dalla pagina.
-let risultato = "";
+let rateUsButton = document.querySelector(".buttonRateUs")
 let success = document.querySelector(".middle-section");
 let result1 = document.querySelector(".result1");
 let result2 = document.querySelector(".result2");
 let result3 = document.querySelector(".result3");
+let risultato = "";
+
+
 const myChart = document.getElementById("my-chart");
+
 
 // Funzione per cambiare il testo della pagina results in base allo score.
 function updateTestResults() {
@@ -241,8 +247,11 @@ new Chart(myChart, {
     options: {
         borderWidth: 0,
         borderRadius: 0,
-        cutout: 250,
-        radius: 250,
+        cutout: 10,
+        radius: 10,
+            responsive: false,
+            maintainAspectRatio: true,
+            showScale: false,
 
         plugins: {
         legend: {
@@ -251,4 +260,11 @@ new Chart(myChart, {
             },
         },
     });
+}
+
+rateUsButton.addEventListener("click", resultsToFeedback)
+
+function resultsToFeedback() {
+    resultsPage.style.display = "none";
+    feedbackPage.style.display = "block";
 }
