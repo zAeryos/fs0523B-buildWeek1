@@ -33,22 +33,21 @@
                 <ul>
                     <li>Each question is <span>timed</span> and can only be <span>answered once</span>.</li>
                     <li>Changing browser tab or opening other windows will <span>invalidate the question</span>.</li>
-                    <li>This exam will take approx. <span>0-5 minutes</span>.</li>
-                    <li>Selection difficult and the number question (min 10/ max 60)</li>
+                    <li>This exam will take approx. <span>40-45 minutes</span>.</li>
                 </ul>
             </div>
         </main>
         <section>
-            <form>
-                <input  id= choose class="choose"type="number" name="numOfQuestions" min="10" max="60" placeholder="10">
-                <label >
-                    <select id="select" class="difficulty">
-                        <option value="Easy">Easy</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Hard" >Hard</option>
+            <!-- <form>
+                <input type="number" class="numChosen" name="numOfQuestions" value="15" min="0" max="60" placeholder="Choose a number of questions.">
+                <label>
+                    <select id="select" class="diffChosen">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
                     </select>
                 </label>
-            </form>
+            </form> -->
         </section>
         <aside class="aside">
             <div class="checkbox2">
@@ -165,7 +164,7 @@
     <div class="feedbackPage"> 
         <header>
             <div id="logo-container">
-                <img src="./assets/images/epicode_logo.png" alt="Epicode Logo" width="200px" height="50px">
+                <img src="./assets/images/epicode_logo.png" alt="Epicode Logo" width="170px" height="40px">
             </div>
         </header>
         <div id="feedback-container" class="text-white centered">
@@ -220,6 +219,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/finalPageScript.js"></script>
-    <script src="./assets/js/feedbackPageScriptTest.js"></script>
+    <script src="./assets/js/feedbackPageScript.js"></script>
 </body>
 </html>
