@@ -33,7 +33,7 @@ button.addEventListener("click", startTimer);
 let welcomePage = document.querySelector(".welcomePage");
 let questionsPage = document.querySelector(".questionsPage");
 let resultsPage = document.querySelector(".resultsPage");
-let feedbackPage = document.querySelector(".feedbackPage")
+let feedbackPage = document.querySelector(".feedbackPage");
 
 // Al click del bottone nella welcome page, nascondo la prima pagina e mostro la seconda.
 button.addEventListener("click", changePage);

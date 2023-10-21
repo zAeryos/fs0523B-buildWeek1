@@ -1,6 +1,6 @@
 // Recupero gli elementi dall'HTML e creo una variabile per il rating dell'utente
-const stars = document.querySelectorAll('.rating-star');
 const feedbackForm = document.getElementById('feedback-form');
+const stars = document.querySelectorAll('.rating-star');
 const userInput = document.getElementById('userInput');
 let userRating = 0;
 
